@@ -213,7 +213,7 @@ class PreprocessorLineart(Preprocessor):
             load_file_from_url(remote_model_path, model_dir=model_dir)
 
         net = res_skip()
-        ckpt = torch.load(model_path)
+        ckpt = torch.load(model_path, map_location=torch.device('cpu'), weights_only=True)
         for key in list(ckpt.keys()):
             if key.startswith('module.'):
                 ckpt[key[7:]] = ckpt.pop(key)
