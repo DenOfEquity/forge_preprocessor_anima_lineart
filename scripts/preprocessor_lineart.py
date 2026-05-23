@@ -196,7 +196,7 @@ class PreprocessorLineart(Preprocessor):
         super().__init__()
         self.name = name
         self.tags = ['Lineart']
-        self.model_filename_filters = ['lineart']
+        self.model_filename_filters = ['lineart', 'any-test-like']
         # use standard resolution slider
         self.slider_1 = PreprocessorParameter(visible=False)
         self.slider_2 = PreprocessorParameter(visible=False)
