@@ -1,8 +1,6 @@
 ## Lineart Preprocessors ##
 
-Extension for Forge derived webUIs for StableDiffusion, that support the [Anima](https://huggingface.co/circlestone-labs/Anima) model and the [LLLite controlnets](https://huggingface.co/kohya-ss/Anima-LLLite) by Kohya:
-* [Forge Neo](https://github.com/Haoming02/sd-webui-forge-classic)
-* and my own fork (already included in that repo)
+Extension for Forge derived webUIs for StableDiffusion, that support the [Anima](https://huggingface.co/circlestone-labs/Anima) model and the [LLLite controlnets](https://huggingface.co/kohya-ss/Anima-LLLite) by Kohya.
 
 Adds five new lineart preprocessors for ControlNet:
 * `lineart_anime_inverted` is simply a modified `lineart_anime_denoised` using the MangaLine (erika.pth) model
@@ -15,4 +13,4 @@ Adds five new lineart preprocessors for ControlNet:
 With the exception of `lineart_xDoG`, these produce black-line-on-white-background output - opposite to the *traditional* preprocessor output. The first three of the five are the preprocessors used in training the **lineart** / **any-test like** controlnets.
 
 ---
-## To install: go to Extensions tab, Install from URL, use URL for this repo ##
+## To install: go to *Extensions* tab, *Install from URL*, use URL for this repo ##
