@@ -253,7 +253,7 @@ class PreprocessorLineart(Preprocessor):
                 g0 = cv2.GaussianBlur(image, (3,3), sigma,   borderType=cv2.BORDER_REPLICATE)
                 g1 = cv2.GaussianBlur(image, (5,5), sigma*k, borderType=cv2.BORDER_REPLICATE)
 
-                dog = (127 + numpy.min(g1-g0, axis=2)).clip(0, 255).astype(numpy.uint8)
+                dog = (127.5 + numpy.min(g1-g0, axis=2)).clip(0, 255).astype(numpy.uint8)
                 result = numpy.zeros_like(image, dtype=numpy.uint8)
                 if 'inverted' in self.name:
                     result[dog < 128] = 255
